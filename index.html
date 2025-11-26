@@ -1,12 +1,83 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Alba Space</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alba Space</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Import the model-viewer web component -->
+  <script
+    type="module"
+    src="https://unpkg.com/@google/model-viewer@^1.13.0/dist/model-viewer.min.js"
+  ></script>
 </head>
 <body>
-<h1>Alba Space</h1>
-<p>Сайт развернут на GitHub Pages.</p>
+  <header>
+    <nav>
+      <div class="logo">ALBA&nbsp;SPACE</div>
+      <ul class="nav-links">
+        <li><a href="#about">О проекте</a></li>
+        <li><a href="#services">Услуги</a></li>
+        <li><a href="#explore">3D&nbsp;AR</a></li>
+        <li><a href="#shop">Магазин</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Познавай космос вместе с нами</h1>
+      <p>
+        Интерактивные 3D‑модели, дополненная реальность и уникальные товары на
+        космическую тематику.
+      </p>
+      <a href="#explore" class="cta">Исследовать</a>
+    </div>
+    <div class="hero-model">
+      <model-viewer
+        id="astronaut-model"
+        src="astronaut.glb"
+        alt="Астронавт"
+        auto-rotate
+        camera-controls
+        ar
+        ar-modes="scene-viewer webxr quick-look"
+        ios-src="astronaut.glb"
+      ></model-viewer>
+    </div>
+  </section>
+
+  <section id="explore" class="features">
+    <h2>Наши возможности</h2>
+    <div class="feature-list">
+      <div class="feature">
+        <h3>3D &amp; AR модели</h3>
+        <p>
+          Взаимодействуйте с высококачественными 3D‑моделями прямо в браузере,
+          запускайте режим дополненной реальности и исследуйте объекты со всех
+          сторон.
+        </p>
+      </div>
+      <div class="feature">
+        <h3>Услуги под ключ</h3>
+        <p>
+          Мы создаём AR/VR‑решения для бизнеса, образования и искусства —
+          обратитесь к нам, чтобы реализовать ваш проект.
+        </p>
+      </div>
+      <div class="feature">
+        <h3>Магазин товаров</h3>
+        <p>
+          Уникальные сувениры, мерч и коллекционные предметы для любителей
+          космоса, доступные в нашем магазине.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025&nbsp;Alba&nbsp;Space. Все права защищены.</p>
+  </footer>
 </body>
 </html>
